@@ -18,18 +18,20 @@
             android:exported="false" />
         <activity
             android:name=".home"
-            android:exported="false" />
-        <activity
-            android:name=".register"
-            android:exported="false" />
-        <activity
-            android:name=".gpa_calc"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".register"
+            android:exported="false" />
+        <activity
+            android:name=".gpa_calc"
+            android:exported="false">
+
         </activity>
 
         <meta-data
