@@ -30,7 +30,7 @@ public class home extends AppCompatActivity {
         todo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent j = new Intent(home.this,register.class);
+                Intent j = new Intent(home.this,ToDo.class);
                 startActivity(j);
             }
         });
