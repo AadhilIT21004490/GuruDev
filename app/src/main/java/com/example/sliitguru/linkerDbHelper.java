@@ -15,38 +15,14 @@ public class linkerDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase DB) {
-    DB.execSQL("create TABLE linkerdetails(title TEXT primary key, link TEXT, description TEXT  )");
+    DB.execSQL("create TABLE linkerdetails(id integer primary key,title TEXT, link TEXT, description TEXT  )");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase DB, int i, int i1) {
     DB.execSQL("drop TABLE if exists linkerdetails");
+    onCreate(DB);
     }
 
-    public Boolean insertlinkerdata(String title, String link, String description ){
 
-        SQLiteDatabase DB= this.getReadableDatabase();
-
-         ContentValues contentValues= new ContentValues();
-            contentValues.put("title",title);
-            contentValues.put("link",link);
-            contentValues.put("description",description);
-            long result=DB.insert("linkerdetails",null,contentValues);
-            if(result==-1){
-                return false;
-            }
-            else {
-                return true;
-            }
-
-
-
-
-    }
-
-    public Cursor getdata(){
-        SQLiteDatabase DB = this.getReadableDatabase();
-        Cursor cursor= DB.rawQuery("Select * from linkerdetails",null);
-        return cursor;
-    }
 }

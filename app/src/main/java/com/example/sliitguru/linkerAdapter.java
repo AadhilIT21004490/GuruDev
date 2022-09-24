@@ -1,51 +1,90 @@
 package com.example.sliitguru;
 
 import android.content.Context;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class linkerAdapter extends RecyclerView.Adapter<linkerAdapter.linkerViewHolder> {
-    private Context context;
-    private ArrayList title_id,link_id,desc_id;
+public class linkerAdapter extends RecyclerView.Adapter<linkerAdapter.ModelViewHolder>  {
+    Context context;
+    ArrayList<linkerModel>modelArrayList=new ArrayList<>();
+    SQLiteDatabase sqLiteDatabase;
 
-    public linkerAdapter(Context context, ArrayList title_id, ArrayList link_id, ArrayList desc_id) {
+    public linkerAdapter(Context context, int linkersingle, ArrayList<linkerModel> modelArrayList, SQLiteDatabase sqLiteDatabase) {
         this.context = context;
-        this.title_id = title_id;
-        this.link_id = link_id;
-        this.desc_id = desc_id;
+        this.modelArrayList = modelArrayList;
+        this.sqLiteDatabase = sqLiteDatabase;
     }
 
     @NonNull
     @Override
-    public linkerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v= LayoutInflater.from(context).inflate(R.layout.linkersingle,parent,false);
-        return new linkerViewHolder(v);
+    public linkerAdapter.ModelViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater inflater=LayoutInflater.from(context);
+        View view= inflater.inflate(R.layout.linkersingle,null);
+        return new ModelViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull linkerViewHolder holder, int position) {
-        holder.title_id.setText(String.valueOf(title_id.get(position)));
-        holder.link_id.setText(String.valueOf(link_id.get(position)));
+    public void onBindViewHolder(@NonNull linkerAdapter.ModelViewHolder holder, int position) {
+        final linkerModel model=modelArrayList.get(position);
+        holder.txttitle.setText(model.getTitle());
+        holder.txtlink.setText(model.getLink());
+
+        holder.Edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle bundle=new Bundle();
+                bundle.putInt("id",model.getId());
+                bundle.putString("title",model.getTitle());
+                bundle.putString("link",model.getLink());
+                bundle.putString("description",model.getDescription());
+                Intent i= new Intent(context,linkeradd.class);
+                i.putExtra("linkdetails",bundle);
+                context.startActivity(i);
+            }
+        });
+
+        holder.delete.setOnClickListener(new View.OnClickListener() {
+            linkerDbHelper helper= new linkerDbHelper(context);
+            @Override
+            public void onClick(View view) {
+                sqLiteDatabase=helper.getReadableDatabase();
+                long delete = sqLiteDatabase.delete("linkerdetails","id="+model.getId(),null);
+                if(delete!=1){
+                    Toast.makeText(context,"Data Deleted Successfully!",Toast.LENGTH_LONG).show();
+                    modelArrayList.remove(position);
+                    notifyDataSetChanged();
+                }
+
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        return title_id.size();
+        return modelArrayList.size();
     }
 
-    public class linkerViewHolder extends RecyclerView.ViewHolder {
-        TextView title_id,link_id,desc_id;
-        public linkerViewHolder(@NonNull View itemView) {
+    public class ModelViewHolder extends RecyclerView.ViewHolder {
+        TextView txttitle,txtlink;
+        Button Edit,delete;
+        public ModelViewHolder(@NonNull View itemView) {
             super(itemView);
-            title_id=itemView.findViewById(R.id.texttitle);
-            link_id=itemView.findViewById(R.id.textlink);
+            txttitle=itemView.findViewById(R.id.texttitle);
+            txtlink=itemView.findViewById(R.id.textlink);
+            Edit=itemView.findViewById(R.id.edit);
+            delete=itemView.findViewById(R.id.delete);
         }
     }
 }

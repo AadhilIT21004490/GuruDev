@@ -11,5 +11,6 @@
     <color name="rich_blue">#222C47</color>
     <color name="calcu">#11A8FD</color>
     <color name="reset_calc">#9E9E9E</color>
+    <color name="edit_btn">#D3B808</color>
 
 </resources>

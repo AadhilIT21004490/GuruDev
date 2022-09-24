@@ -40,25 +40,6 @@
 
         <EditText
             android:backgroundTint="@color/white"
-            android:layout_marginBottom="20px"
-            android:id="@+id/link"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:fontFamily="@font/roboto_medium"
-            android:hint="Link"
-            android:textColor="@color/white"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColorHint="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.39" />
-        <EditText
-            android:backgroundTint="@color/white"
             android:layout_marginBottom="40px"
             android:id="@+id/title"
             android:layout_width="300dp"
@@ -76,6 +57,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.282" />
+        <EditText
+            android:backgroundTint="@color/white"
+            android:layout_marginBottom="20px"
+            android:id="@+id/link"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="Link"
+            android:textColor="@color/white"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColorHint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.39" />
+
 
         <TextView
             android:layout_marginLeft="10px"
@@ -131,6 +132,20 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.691" />
+            <Button
+
+                android:id="@+id/update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.17"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.691"
+                android:visibility="gone"/>
             <Button
                android:layout_marginLeft="300px"
                 android:id="@+id/clear"

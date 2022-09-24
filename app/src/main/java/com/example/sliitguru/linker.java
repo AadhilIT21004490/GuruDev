@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -18,14 +19,15 @@ public class linker extends AppCompatActivity {
 
     FloatingActionButton fap;
     RecyclerView recyclerView;
-    ArrayList<String> title,link,desc;
     linkerDbHelper DB;
     linkerAdapter adapter;
+    SQLiteDatabase sqLiteDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_linker);
         fap=findViewById(R.id.floatingActionButton);
+        recyclerView=findViewById(R.id.recycleview);
 
         fap.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,29 +37,27 @@ public class linker extends AppCompatActivity {
             }
         });
 
-        DB = new linkerDbHelper(this);
-        title=new ArrayList<>();
-        link=new ArrayList<>();
-        desc=new ArrayList<>();
-        recyclerView=findViewById(R.id.recycleview);
-        adapter=new linkerAdapter(this,title,link,desc);
-        recyclerView.setAdapter(adapter);
+        DB=new linkerDbHelper(this);
+        displayData();
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        displaydata();
+
     }
 
-    private void displaydata() {
-        Cursor cursor=DB.getdata();
-        if (cursor.getCount()==0){
-            Toast.makeText(linker.this,"No Entry Exists",Toast.LENGTH_LONG).show();
-            return;
+    private void displayData() {
+        sqLiteDatabase=DB.getReadableDatabase();
+        Cursor cursor=sqLiteDatabase.rawQuery("select * from linkerdetails",null);
+        ArrayList<linkerModel>modelArrayList=new ArrayList<>();
+        while (cursor.moveToNext()){
+            int id = cursor.getInt(0);
+            String title=cursor.getString(1);
+            String link=cursor.getString(2);
+            String desc=cursor.getString(3);
+            modelArrayList.add(new linkerModel(id,title,link,desc));
         }
-        else{
-            while (cursor.moveToNext()){
-                title.add(cursor.getString(0));
-                link.add(cursor.getString(1));
-                desc.add(cursor.getString(2));
-            }
-        }
+        cursor.close();
+        adapter= new linkerAdapter(this,R.layout.linkersingle,modelArrayList,sqLiteDatabase);
+        recyclerView.setAdapter(adapter);
     }
+
+
 }
