@@ -26,6 +26,7 @@ public class AddToDoActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 todo_DB_Helper myDB = new todo_DB_Helper(AddToDoActivity.this);
+                myDB.addToDo(todo_add_title.getText().toString().trim(), todo_add_desc.getText().toString().trim());
 
             }
         });
