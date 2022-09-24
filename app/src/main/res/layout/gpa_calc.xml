@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context=".UserHomeActivity"
-    android:background="@drawable/gradientallbook">
+    tools:context=".gpa_calc"
+    android:background="@mipmap/bg_calc">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -19,18 +19,18 @@
             android:orientation="vertical"
             android:gravity="center_horizontal">
 
+
             <TextView
                 android:id="@+id/welcome_user"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="Welcome"
+                android:fontFamily="@font/roboto_medium"
+                android:text="GPA Calculator"
                 android:textAlignment="center"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="30dp" />
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -51,23 +51,43 @@
                         android:layout_height="190dp"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/green_card_background"
+                        android:background="@drawable/calc_card"
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_borrowing" />
 
                         <TextView
+                            android:id="@+id/s1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_semibold"
-                            android:text="Booking"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Semester 1"
                             android:textAlignment="center"
                             android:textColor="@color/white"
+                            android:textSize="24sp"
                             android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/s1_gpa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="GPA = 0.00"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/s1_credit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Credit = 0"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
 
                     </LinearLayout>
 
@@ -77,23 +97,42 @@
                         android:layout_height="190dp"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/green_card_background"
+                        android:background="@drawable/calc_card"
                         android:gravity="center"
                         android:orientation="vertical">
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_returnbook" />
-
                         <TextView
+                            android:id="@+id/s2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_semibold"
-                            android:text="Returns"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Semester 2"
                             android:textAlignment="center"
                             android:textColor="@color/white"
+                            android:textSize="24sp"
                             android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/s2_gpa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="GPA = 0.00"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/s2_credit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Credit = 0"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
 
                     </LinearLayout>
 
@@ -115,21 +154,40 @@
                         android:orientation="vertical"
                         android:gravity="center"
                         android:layout_margin="10dp"
-                        android:background="@drawable/green_card_background">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_allreservations" />
+                        android:background="@drawable/calc_card">
 
                         <TextView
+                            android:id="@+id/s3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_semibold"
-                            android:text="Reservations"
-                            android:textColor="@color/white"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Semester 3"
                             android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
                             android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/s3_gpa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="GPA = 0.00"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/s3_credit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Credit = 0"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
 
                     </LinearLayout>
 
@@ -141,21 +199,40 @@
                         android:orientation="vertical"
                         android:gravity="center"
                         android:layout_margin="10dp"
-                        android:background="@drawable/green_card_background">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_search_white" />
+                        android:background="@drawable/calc_card">
 
                         <TextView
+                            android:id="@+id/s4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_semibold"
-                            android:text="Find book"
-                            android:textColor="@color/white"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Semester 4"
                             android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
                             android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/s4_gpa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="GPA = 0.00"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/s4_credit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Credit = 0"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
 
                     </LinearLayout>
 
@@ -177,19 +254,39 @@
                         android:orientation="vertical"
                         android:gravity="center"
                         android:layout_margin="10dp"
-                        android:background="@drawable/green_card_background">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_ebooks" />
+                        android:background="@drawable/calc_card">
 
                         <TextView
+                            android:id="@+id/s5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="E Books"
-                            android:textColor="@color/white"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Semester 5"
                             android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/s5_gpa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="GPA = 0.00"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/s5_credit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Credit = 0"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -202,19 +299,39 @@
                         android:orientation="vertical"
                         android:gravity="center"
                         android:layout_margin="10dp"
-                        android:background="@drawable/green_card_background">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_ebooks" />
+                        android:background="@drawable/calc_card">
 
                         <TextView
+                            android:id="@+id/s6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Downloaded \nE Books"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Semester 6"
                             android:textAlignment="center"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/s6_gpa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="GPA = 0.00"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/s6_credit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Credit = 0"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -237,19 +354,39 @@
                         android:orientation="vertical"
                         android:gravity="center"
                         android:layout_margin="10dp"
-                        android:background="@drawable/green_card_background">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_allnotification" />
+                        android:background="@color/rich_blue">
 
                         <TextView
+                            android:id="@+id/s7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Notifications"
-                            android:textColor="@color/white"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Semester 7"
                             android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/s7_gpa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="GPA = 0.00"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/s7_credit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Credit = 0"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -262,19 +399,39 @@
                         android:orientation="vertical"
                         android:gravity="center"
                         android:layout_margin="10dp"
-                        android:background="@drawable/green_card_background">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_account" />
+                        android:background="@color/rich_blue">
 
                         <TextView
+                            android:id="@+id/s8"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Account"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Semester 8"
                             android:textAlignment="center"
                             android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/s8_gpa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="GPA = 0.00"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/s8_credit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Credit = 0"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
