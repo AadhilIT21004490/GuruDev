@@ -15,6 +15,7 @@ public class linker extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_linker);
+        fap=findViewById(R.id.floatingActionButton);
 
         fap.setOnClickListener(new View.OnClickListener() {
             @Override
