@@ -263,7 +263,7 @@
                             android:fontFamily="@font/roboto_medium"
                             android:text="Semester 5"
                             android:textAlignment="center"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="24sp"
                             android:textStyle="bold" />
 
@@ -274,9 +274,9 @@
                             android:fontFamily="@font/roboto_medium"
                             android:text="GPA = 0.00"
                             android:textAlignment="center"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="20sp"
-                            android:textStyle="bold" />
+                            android:textStyle="normal" />
 
                         <TextView
                             android:id="@+id/s5_credit"
@@ -285,9 +285,9 @@
                             android:fontFamily="@font/roboto_medium"
                             android:text="Credit = 0"
                             android:textAlignment="center"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textStyle="normal" />
 
                     </LinearLayout>
 
@@ -308,7 +308,7 @@
                             android:fontFamily="@font/roboto_medium"
                             android:text="Semester 6"
                             android:textAlignment="center"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="24sp"
                             android:textStyle="bold" />
 
@@ -319,9 +319,9 @@
                             android:fontFamily="@font/roboto_medium"
                             android:text="GPA = 0.00"
                             android:textAlignment="center"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="20sp"
-                            android:textStyle="bold" />
+                            android:textStyle="normal" />
 
                         <TextView
                             android:id="@+id/s6_credit"
@@ -330,9 +330,9 @@
                             android:fontFamily="@font/roboto_medium"
                             android:text="Credit = 0"
                             android:textAlignment="center"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:textStyle="normal" />
 
                     </LinearLayout>
 
