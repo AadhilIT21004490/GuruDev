@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Aathil Mob/app/src/main/res/drawable/homebuttons.xml" value="0.19" />
+        <entry key="..\:/Aathil Mob/app/src/main/res/drawable/homedrawablecal.xml" value="0.19" />
+        <entry key="..\:/Aathil Mob/app/src/main/res/drawable/homedrawablelinker.xml" value="0.19" />
+        <entry key="..\:/Aathil Mob/app/src/main/res/layout/activity_home.xml" value="0.14" />
+        <entry key="..\:/Aathil Mob/app/src/main/res/layout/activity_linker.xml" value="0.25" />
+        <entry key="..\:/Aathil Mob/app/src/main/res/layout/activity_linkeradd.xml" value="0.25" />
+        <entry key="..\:/Aathil Mob/app/src/main/res/layout/gpa_calc.xml" value="0.1" />
         <entry key="..\:/Users/Shelby/Desktop/MAD/SLIIT GURU/app/src/main/res/drawable/calculator.xml" value="0.25" />
         <entry key="..\:/Users/Shelby/Desktop/MAD/SLIIT GURU/app/src/main/res/font/roboto_medium.xml" value="0.284375" />
         <entry key="..\:/Users/Shelby/Desktop/MAD/SLIIT GURU/app/src/main/res/layout/activity_gpa_calculation.xml" value="0.2" />
