@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class gpa_calculation extends AppCompatActivity {
+public class gpa_calculation_s3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gpa_calculation);
+        setContentView(R.layout.activity_gpa_calculation_s3);
     }
 }

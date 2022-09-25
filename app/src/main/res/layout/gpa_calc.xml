@@ -46,7 +46,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:id="@+id/borrowing"
+                        android:id="@+id/s1"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_margin="10dp"
@@ -57,7 +57,7 @@
 
 
                         <TextView
-                            android:id="@+id/s1"
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_medium"
@@ -92,7 +92,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/returns"
+                        android:id="@+id/s2"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_margin="10dp"
@@ -102,7 +102,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/s2"
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_medium"
@@ -147,7 +147,7 @@
                     android:layout_marginBottom="5dp">
 
                     <LinearLayout
-                        android:id="@+id/reservation_book"
+                        android:id="@+id/s3"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -157,7 +157,7 @@
                         android:background="@drawable/calc_card">
 
                         <TextView
-                            android:id="@+id/s3"
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_medium"
@@ -192,7 +192,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/find_book"
+                        android:id="@+id/s4"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -202,7 +202,7 @@
                         android:background="@drawable/calc_card">
 
                         <TextView
-                            android:id="@+id/s4"
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_medium"
@@ -247,7 +247,7 @@
                     android:layout_marginBottom="5dp">
 
                     <LinearLayout
-                        android:id="@+id/ebooks"
+                        android:id="@+id/s5"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -257,7 +257,7 @@
                         android:background="@drawable/calc_card">
 
                         <TextView
-                            android:id="@+id/s5"
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_medium"
@@ -292,7 +292,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/downloaded_books"
+                        android:id="@+id/s6"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -302,7 +302,7 @@
                         android:background="@drawable/calc_card">
 
                         <TextView
-                            android:id="@+id/s6"
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_medium"
@@ -347,7 +347,7 @@
                     android:layout_marginBottom="5dp">
 
                     <LinearLayout
-                        android:id="@+id/notification"
+                        android:id="@+id/s7"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -357,7 +357,7 @@
                         android:background="@color/rich_blue">
 
                         <TextView
-                            android:id="@+id/s7"
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_medium"
@@ -392,7 +392,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/account"
+                        android:id="@+id/s8"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -402,7 +402,7 @@
                         android:background="@color/rich_blue">
 
                         <TextView
-                            android:id="@+id/s8"
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_medium"
