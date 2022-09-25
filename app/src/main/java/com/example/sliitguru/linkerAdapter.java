@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -69,6 +70,16 @@ public class linkerAdapter extends RecyclerView.Adapter<linkerAdapter.ModelViewH
 
             }
         });
+
+        holder.share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Intent.ACTION_SEND);
+                intent.putExtra(Intent.EXTRA_TEXT,"Check this link about"+holder.txttitle.getText().toString()+"through this link"+holder.txtlink.getText().toString());
+                intent.setType("text/plain");
+                context.startActivity(Intent.createChooser(intent,"Send To"));
+            }
+        });
     }
 
     @Override
@@ -79,12 +90,14 @@ public class linkerAdapter extends RecyclerView.Adapter<linkerAdapter.ModelViewH
     public class ModelViewHolder extends RecyclerView.ViewHolder {
         TextView txttitle,txtlink;
         Button Edit,delete;
+        ImageView share;
         public ModelViewHolder(@NonNull View itemView) {
             super(itemView);
             txttitle=itemView.findViewById(R.id.texttitle);
             txtlink=itemView.findViewById(R.id.textlink);
             Edit=itemView.findViewById(R.id.edit);
             delete=itemView.findViewById(R.id.delete);
+            share=itemView.findViewById(R.id.share);
         }
     }
 }
