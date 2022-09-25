@@ -75,7 +75,7 @@ public class linkerAdapter extends RecyclerView.Adapter<linkerAdapter.ModelViewH
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(Intent.ACTION_SEND);
-                intent.putExtra(Intent.EXTRA_TEXT,"Check this link about"+holder.txttitle.getText().toString()+"through this link"+holder.txtlink.getText().toString());
+                intent.putExtra(Intent.EXTRA_TEXT,"Check this link about "+holder.txttitle.getText().toString()+" through this link "+holder.txtlink.getText().toString());
                 intent.setType("text/plain");
                 context.startActivity(Intent.createChooser(intent,"Send To"));
             }
