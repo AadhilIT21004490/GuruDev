@@ -24,6 +24,7 @@
 
 
     <Spinner
+        android:spinnerMode="dropdown"
         android:id="@+id/m1"
         android:layout_width="53dp"
         android:layout_height="48dp"
@@ -37,10 +38,11 @@
     <EditText
         android:id="@+id/c4"
         android:layout_width="124dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:ems="10"
-        android:inputType="number"
         android:hint="Credit"
+        android:text="0"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.944"
@@ -61,7 +63,7 @@
     <EditText
         android:id="@+id/n4"
         android:layout_width="124dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Module 1"
@@ -80,12 +82,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.432" />
+        app:layout_constraintVertical_bias="0.432"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/n7"
         android:layout_width="124dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Module 1"
@@ -99,10 +102,11 @@
     <EditText
         android:id="@+id/c6"
         android:layout_width="124dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:ems="10"
-        android:inputType="number"
         android:hint="Credit"
+        android:text="0"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.944"
@@ -113,10 +117,11 @@
     <EditText
         android:id="@+id/c5"
         android:layout_width="124dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:ems="10"
-        android:inputType="number"
         android:hint="Credit"
+        android:text="0"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.944"
@@ -127,10 +132,11 @@
     <EditText
         android:id="@+id/c3"
         android:layout_width="124dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:ems="10"
-        android:inputType="number"
         android:hint="Credit"
+        android:text="0"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.944"
@@ -141,7 +147,7 @@
     <EditText
         android:id="@+id/n3"
         android:layout_width="124dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Module 1"
@@ -155,10 +161,11 @@
     <EditText
         android:id="@+id/c1"
         android:layout_width="124dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:ems="10"
-        android:inputType="number"
         android:hint="Credit"
+        android:text="0"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.944"
@@ -169,7 +176,7 @@
     <EditText
         android:id="@+id/n6"
         android:layout_width="124dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Module 1"
@@ -183,7 +190,7 @@
     <EditText
         android:id="@+id/n2"
         android:layout_width="124dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Module 1"
@@ -197,7 +204,7 @@
     <EditText
         android:id="@+id/n1"
         android:layout_width="124dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Module 1"
@@ -211,10 +218,11 @@
     <EditText
         android:id="@+id/c2"
         android:layout_width="124dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:ems="10"
-        android:inputType="number"
         android:hint="Credit"
+        android:text="0"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.944"
@@ -225,10 +233,11 @@
     <EditText
         android:id="@+id/c7"
         android:layout_width="124dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:ems="10"
-        android:inputType="number"
         android:hint="Credit"
+        android:text="0"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.944"
@@ -271,7 +280,7 @@
     <Spinner
         android:id="@+id/m2"
         android:layout_width="53dp"
-        android:layout_height="43dp"
+        android:layout_height="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -281,7 +290,7 @@
     <EditText
         android:id="@+id/n5"
         android:layout_width="124dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Module 1"
