@@ -38,7 +38,7 @@ public class home extends AppCompatActivity {
         reminder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent k = new Intent(home.this,register.class);
+                Intent k = new Intent(home.this,addreminder.class);
                 startActivity(k);
             }
         });
