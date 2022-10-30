@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.service.controls.actions.FloatAction;
 import android.view.View;
@@ -18,52 +19,45 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class ToDo extends AppCompatActivity {
+    FloatingActionButton fap;
     RecyclerView recyclerView;
-    FloatingActionButton add_button;
-
-    todo_DB_Helper myDB;
-    ArrayList<String> todo_id, todo_title, todo_desc;
-    ToDoAdapter toDoAdapter;
-
-
+    todo_DB_Helper DB;
+    TodoAdapter adapter;
+    SQLiteDatabase sqLiteDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_to_do);
+        fap=findViewById(R.id.add_button);
+        recyclerView=findViewById(R.id.recycleview);
 
-        recyclerView = findViewById(R.id.recycleview);
-        add_button = findViewById(R.id.add_button);
-        add_button.setOnClickListener(new View.OnClickListener() {
+        fap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ToDo.this, AddToDoActivity.class);
-                startActivity(intent);
+                Intent i = new Intent(ToDo.this,AddToDoActivity.class);
+                startActivity(i);
             }
         });
 
-        myDB = new todo_DB_Helper(ToDo.this);
-        todo_id = new ArrayList<>();
-        todo_title = new ArrayList<>();
-        todo_desc = new ArrayList<>();
+        DB=new todo_DB_Helper(this);
+        displayData();
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        storeDataInArrays();
-
-        toDoAdapter = new ToDoAdapter(ToDo.this, todo_id, todo_title, todo_desc);
-        recyclerView.setAdapter(toDoAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(ToDo.this));
     }
 
-
-    void storeDataInArrays() {
-        Cursor cursor = myDB.readAllData();
-        if (cursor.getCount() == 0) {
-            Toast.makeText(this, "No Data", Toast.LENGTH_SHORT).show();
-        }else {
-            while (cursor.moveToNext()){
-                todo_id.add(cursor.getString(0));
-                todo_title.add(cursor.getString(1));
-                todo_desc.add(cursor.getString(2));
-            }
+    private void displayData() {
+        sqLiteDatabase=DB.getReadableDatabase();
+        Cursor cursor=sqLiteDatabase.rawQuery("select * from tododetails",null);
+        ArrayList<TodoModel>modelArrayList=new ArrayList<>();
+        while (cursor.moveToNext()){
+            int id = cursor.getInt(0);
+            String title=cursor.getString(1);
+            String desc=cursor.getString(2);
+            modelArrayList.add(new TodoModel(id,title,desc));
         }
+        cursor.close();
+        adapter= new TodoAdapter(this,R.layout.todosingle,modelArrayList,sqLiteDatabase);
+        recyclerView.setAdapter(adapter);
     }
+
 }
