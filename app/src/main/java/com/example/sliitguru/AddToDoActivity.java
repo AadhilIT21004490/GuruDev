@@ -14,7 +14,7 @@ public class AddToDoActivity extends AppCompatActivity {
 
     EditText title,desc;
     Button add,clear,update;
-    linkerDbHelper DB;
+    todo_DB_Helper DB;
     SQLiteDatabase sqLiteDatabase;
     int id =0;
 
@@ -29,7 +29,7 @@ public class AddToDoActivity extends AppCompatActivity {
         clear=findViewById(R.id.clear);
         update=findViewById(R.id.update);
 
-        DB=new linkerDbHelper(this);
+        DB=new todo_DB_Helper(this);
         insertdata();
         editdata();
 
@@ -95,7 +95,7 @@ public class AddToDoActivity extends AppCompatActivity {
                 sqLiteDatabase=DB.getWritableDatabase();
                 long recinsert=sqLiteDatabase.insert("tododetails",null,cv);
                 if(recinsert==-1){
-                    Toast.makeText(AddToDoActivity.this,"Todo Added Fail!",Toast.LENGTH_LONG).show();
+                    Toast.makeText(AddToDoActivity.this,"Todo Added Fail!2",Toast.LENGTH_LONG).show();
                 }
                 else{
                     Toast.makeText(AddToDoActivity.this,"Todo Added Successfully!",Toast.LENGTH_LONG).show();
