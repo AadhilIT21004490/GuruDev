@@ -35,7 +35,7 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:background="@mipmap/banner"
+            android:background="@mipmap/banner1"
             android:layout_height="170dp"/>
 
         <LinearLayout

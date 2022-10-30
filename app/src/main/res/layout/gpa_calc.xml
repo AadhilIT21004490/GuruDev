@@ -358,7 +358,7 @@
                         android:orientation="vertical"
                         android:gravity="center"
                         android:layout_margin="10dp"
-                        android:background="@color/rich_blue">
+                        android:background="@drawable/calc_card">
 
                         <TextView
 
@@ -403,7 +403,7 @@
                         android:orientation="vertical"
                         android:gravity="center"
                         android:layout_margin="10dp"
-                        android:background="@color/rich_blue">
+                        android:background="@drawable/calc_card">
 
                         <TextView
 
