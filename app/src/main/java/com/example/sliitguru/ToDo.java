@@ -1,5 +1,6 @@
 package com.example.sliitguru;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -51,6 +52,7 @@ public class ToDo extends AppCompatActivity {
         recyclerView.setAdapter(toDoAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(ToDo.this));
     }
+
 
     void storeDataInArrays() {
         Cursor cursor = myDB.readAllData();

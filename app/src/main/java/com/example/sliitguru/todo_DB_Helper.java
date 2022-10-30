@@ -22,7 +22,7 @@ class todo_DB_Helper extends SQLiteOpenHelper {
     private static final String COLOMN_DESC = "todo_desc";
     //private static final String COLOMN_PAGES ="book_pages";//
 
-    public todo_DB_Helper(@Nullable Context context) {
+    todo_DB_Helper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.context = context;
     }
@@ -42,12 +42,12 @@ class todo_DB_Helper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    void addToDo(String title, String author) {
+    void addToDo(String title, String desc) {                   //author changed to desc//
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
         cv.put(COLOMN_TITLE, title);
-        cv.put(COLOMN_DESC, author);
+        cv.put(COLOMN_DESC, desc);                               //author changed to desc
         //cv.put(COLOMN_PAGES, pages);//
         long result = db.insert(TABLE_NAME, null, cv);
         if (result == -1) {
@@ -66,5 +66,20 @@ class todo_DB_Helper extends SQLiteOpenHelper {
             cursor = db.rawQuery(query, null);
         }
         return cursor;
+    }
+
+    void updateData(String row_id, String title, String desc){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(COLOMN_TITLE, title);
+        cv.put(COLOMN_DESC, desc);
+
+        long result =  db.update(TABLE_NAME, cv, "id=?", new String[]{row_id});
+        if (result == -1){
+            Toast.makeText(context, "Failed to update..Sorry", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Toast.makeText(context, "Successfully Updated!!", Toast.LENGTH_SHORT).show();
+        }
     }
 }

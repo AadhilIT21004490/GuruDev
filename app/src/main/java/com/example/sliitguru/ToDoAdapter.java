@@ -1,9 +1,13 @@
 package com.example.sliitguru;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,6 +21,7 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.MyViewHolder> 
 
     private Context context;
     private ArrayList todo_id, todo_title, todo_desc;
+    private int position;
 
     ToDoAdapter(Context context,
                 ArrayList todo_id,
@@ -28,7 +33,8 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.MyViewHolder> 
         this.todo_desc = todo_desc;
     }
 
-
+    public ToDoAdapter(ArrayList<String> todo_id, ArrayList<String> todo_title, ArrayList<String> todo_desc) {
+    }
 
 
     @NonNull
@@ -41,10 +47,20 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        //this.position = position;
         holder.todo_id.setText(String.valueOf(todo_id.get(position)));
         holder.todo_title_id.setText(String.valueOf(todo_title.get(position)));
         holder.todo_desc_id.setText(String.valueOf(todo_desc.get(position)));
-
+        holder.mainLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, UpdateToDoActivity.class);
+                intent.putExtra("id", String.valueOf(todo_id.get(position)));
+                intent.putExtra("title", String.valueOf(todo_title.get(position)));
+                intent.putExtra("desc", String.valueOf(todo_desc.get(position)));
+                context.startActivity(intent);
+            }
+        });
 
     }
 
@@ -56,6 +72,7 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.MyViewHolder> 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView todo_id, todo_title_id, todo_desc_id;
+        LinearLayout mainLayout;
 
         //Error Maybe occure for this below code line //
         public MyViewHolder(@NonNull View itemView) {
@@ -63,6 +80,7 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.MyViewHolder> 
             todo_id = itemView.findViewById(R.id.todo_id);
             todo_title_id = itemView.findViewById(R.id.todo_title_id);
             todo_desc_id = itemView.findViewById(R.id.todo_desc_id);
+            mainLayout= itemView.findViewById(R.id.mainLayout);
         }
     }
 }

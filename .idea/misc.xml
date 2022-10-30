@@ -7,13 +7,10 @@
         <entry key="..\:/Aathil Mob/app/src/main/res/drawable/homebuttons.xml" value="0.19" />
         <entry key="..\:/Aathil Mob/app/src/main/res/drawable/homedrawablecal.xml" value="0.19" />
         <entry key="..\:/Aathil Mob/app/src/main/res/drawable/homedrawablelinker.xml" value="0.19" />
-        <entry key="..\:/Aathil Mob/app/src/main/res/drawable/ic_notification.xml" value="0.19" />
         <entry key="..\:/Aathil Mob/app/src/main/res/drawable/linker.xml" value="0.19" />
         <entry key="..\:/Aathil Mob/app/src/main/res/drawable/linker_add_card.xml" value="0.19" />
-        <entry key="..\:/Aathil Mob/app/src/main/res/drawable/reminderdatasingle.xml" value="0.19" />
         <entry key="..\:/Aathil Mob/app/src/main/res/drawable/todo.xml" value="0.19" />
         <entry key="..\:/Aathil Mob/app/src/main/res/layout/activity_add_to_do.xml" value="0.2" />
-        <entry key="..\:/Aathil Mob/app/src/main/res/layout/activity_addreminder.xml" value="0.2" />
         <entry key="..\:/Aathil Mob/app/src/main/res/layout/activity_gpa_calculation.xml" value="0.2" />
         <entry key="..\:/Aathil Mob/app/src/main/res/layout/activity_gpa_calculation_s1.xml" value="0.33" />
         <entry key="..\:/Aathil Mob/app/src/main/res/layout/activity_gpa_calculation_s2.xml" value="0.2" />
@@ -26,23 +23,22 @@
         <entry key="..\:/Aathil Mob/app/src/main/res/layout/activity_home.xml" value="0.14" />
         <entry key="..\:/Aathil Mob/app/src/main/res/layout/activity_linker.xml" value="0.25" />
         <entry key="..\:/Aathil Mob/app/src/main/res/layout/activity_linkeradd.xml" value="0.22" />
-        <entry key="..\:/Aathil Mob/app/src/main/res/layout/activity_reminder.xml" value="0.25" />
         <entry key="..\:/Aathil Mob/app/src/main/res/layout/activity_to_do.xml" value="0.17255434782608695" />
         <entry key="..\:/Aathil Mob/app/src/main/res/layout/gpa_calc.xml" value="0.22" />
         <entry key="..\:/Aathil Mob/app/src/main/res/layout/linkersingle.xml" value="0.1" />
-        <entry key="..\:/Aathil Mob/app/src/main/res/layout/reminderdatasingle.xml" value="0.33" />
-        <entry key="..\:/Aathil Mob/app/src/main/res/layout/semester_single.xml" value="0.2" />
         <entry key="..\:/Aathil Mob/app/src/main/res/layout/todo_adapter.xml" value="0.2" />
         <entry key="..\:/Users/Shelby/Desktop/MAD/SLIIT GURU/app/src/main/res/drawable/calculator.xml" value="0.25" />
         <entry key="..\:/Users/Shelby/Desktop/MAD/SLIIT GURU/app/src/main/res/font/roboto_medium.xml" value="0.284375" />
         <entry key="..\:/Users/Shelby/Desktop/MAD/SLIIT GURU/app/src/main/res/layout/activity_gpa_calculation.xml" value="0.2" />
         <entry key="..\:/Users/Shelby/Desktop/MAD/SLIIT GURU/app/src/main/res/layout/activity_home.xml" value="0.264" />
+        <entry key="..\:/Users/Shelby/Desktop/MAD/SLIIT GURU/app/src/main/res/layout/activity_home2.xml" value="0.264" />
         <entry key="..\:/Users/Shelby/Desktop/MAD/SLIIT GURU/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/Shelby/Desktop/MAD/SLIIT GURU/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/Users/Shelby/Desktop/MAD/SLIIT GURU/app/src/main/res/layout/activity_semesmter_single.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/Shelby/Desktop/MAD/SLIIT GURU/app/src/main/res/layout/calc_single.xml" value="0.4" />
         <entry key="..\:/Users/Shelby/Desktop/MAD/SLIIT GURU/app/src/main/res/layout/gpa_calc.xml" value="0.152" />
         <entry key="..\:/Users/Shelby/Desktop/MAD/SLIIT GURU/app/src/main/res/layout/semester_single.xml" value="0.2938388625592417" />
+        <entry key="..\:/Users/Shelby/Desktop/MAD/SLIIT GURU/app/src/main/res/layout/todo_adapter.xml" value="0.16983695652173914" />
       </map>
     </option>
   </component>

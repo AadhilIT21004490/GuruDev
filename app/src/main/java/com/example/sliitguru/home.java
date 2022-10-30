@@ -1,14 +1,16 @@
 package com.example.sliitguru;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CalendarView;
 
 public class home extends AppCompatActivity {
-    Button gpa,todo,reminder,linker;
+    CardView gpa,todo,reminder,linker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
